@@ -7,15 +7,121 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
     <title>Regex</title>
 </head>
+<style>
 
-<body id="box">
-    <input type="text" id="input"/> <input type="button" value="Validate" onclick="turn()"><br/>
+body {
+  background-image: url("grey.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  height:100%;
+  width:100%;
+  margin:0;
+  padding: 0;
+}
+
+#title
+{
+  height: 100px;
+  border:6px solid white;
+  border-radius: 50px 10px;
+  margin-bottom: 8px;
+  background-color: rgb(14, 93, 48);
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#box {
+  border: 3px solid white;
+  border-radius: 50px 10px;
+  text-align: center;
+  margin: 24px 0 12px 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px
+}
+
+#input {
+  border: 2px solid grey;
+  border-radius: 50px 10px;
+  color: grey;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 20px;
+
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  cursor: pointer;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px
+}
+#butt {
+  border: 2px solid white;
+  border-radius: 50px 10px;
+  background-color: rgb(14, 93, 48);
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 20px;
+
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+#face {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  width:75px;
+  height:75px;
+  display:inline-block;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px
+}
+
+</style>
+<div id="title">
+  <center>
+    <h1>Project Regex</h1>
+  </center>
+</div>
+
+<body>
+  <div id="box">
+    <input type="text" id="input"/> <input type="button" id="butt" value="Validate" onclick="turn()"><br/>
+    <div id="face"><img src='neutral.png' alt='neutral' height='75px' width='75px'></div>
+  </div>
 
 <script>
+let reg =  /^(\+421|0|00421)[0-9]{9}$/;
+let result = false;
+
 const turn = () => {
   // w.i.p
 }
